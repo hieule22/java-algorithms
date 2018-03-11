@@ -1,0 +1,7 @@
+# Intellij IDEA metadata
+.idea/
+out/
+*.iml
+
+# Emacs autosaves
+*~
