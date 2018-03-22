@@ -7,15 +7,15 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 /**
  * @author Hieu Le
  * @version 3/11/18
  */
 public class BinarySearchTest {
+
+    private static final List<Integer> emptyIntList = Collections.emptyList();
 
     @Test
     public void lowerBound() throws Exception {
@@ -40,7 +40,7 @@ public class BinarySearchTest {
 
     @Test
     public void lowerBoundEmptyList() throws Exception {
-        assertEquals(BinarySearch.lowerBound(Collections.emptyList(), 1), 0);
+        assertEquals(BinarySearch.lowerBound(emptyIntList, 1), 0);
     }
 
     @Test
@@ -57,7 +57,7 @@ public class BinarySearchTest {
 
     @Test
     public void upperBoundEmptyList() throws Exception {
-        assertEquals(BinarySearch.upperBound(Collections.emptyList(), 1), 0);
+        assertEquals(BinarySearch.upperBound(emptyIntList, 1), 0);
     }
 
     @Test
@@ -85,6 +85,6 @@ public class BinarySearchTest {
 
     @Test
     public void binarySearchEmptyList() throws Exception {
-        assertFalse(BinarySearch.binarySearch(Collections.emptyList(), 1));
+        assertFalse(BinarySearch.binarySearch(emptyIntList, 1));
     }
 }
