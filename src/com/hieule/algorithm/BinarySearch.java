@@ -10,6 +10,8 @@ import java.util.List;
  */
 public final class BinarySearch {
 
+    private BinarySearch() { /* Hides the constructor. */ }
+
     /**
      * Returns the index of the first element from list which does not compare less than value.
      */
