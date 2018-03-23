@@ -36,4 +36,16 @@ public class Other {
 
         return !aIterator.hasNext() && bIterator.hasNext();
     }
+
+    public static <T> boolean lexicographicalCompare(Comparable<? super T>[] a, T[] b) {
+        int aIndex = 0;
+        int bIndex = 0;
+        while (aIndex < a.length && bIndex < b.length) {
+            int compResult = a[aIndex++].compareTo(b[bIndex++]);
+            if (compResult != 0)
+                return compResult < 0;
+        }
+
+        return aIndex == a.length && bIndex < b.length;
+    }
 }
